@@ -42,7 +42,7 @@ with open('input.txt') as f:
         else:
             result+= dict[result_list[i]]
 
-    print(result)
+    #print(result)
         #print(strs)
 
 
