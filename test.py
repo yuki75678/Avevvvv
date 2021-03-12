@@ -2,21 +2,22 @@
 このファイルに解答コードを書いてください
 """
 
-f = open('input.txt', 'r', encoding='UTF-8')
+#f = open('input.txt', 'r', encoding='UTF-8')
 
 
-#print(f)
+#read data
 with open('input.txt') as f:
     l = f.readlines()
     check_num = int(l[len(l)-1])
-    #print(check_num)
+    #save result
     result = check_num
 
-    #print(l)
+    #prepare dict and save_data
     dict={}
     lists_n =[]
     result_list=[]
 
+    #pull data
     for i in range(len(l)-1):
 
         #print(l[i])
@@ -24,19 +25,18 @@ with open('input.txt') as f:
         #print(index)
         num = int(l[i][:index])
         lists_n.append(num)
-        #print(num)
-        #print('7')
+
         strs = l[i][index+1:].replace( '\n' , '' )
         if check_num % num==0:
 
             dict[num]= strs
             result_list.append(num)
-    #print(dict)
-    #print(result_list)
+    #sort
     result_list= sorted(result_list)
-    #print(result_list)
+
+    #create result by list
     for i in range(len(result_list)):
-    #    print(dict[result_list[i]])
+    
         if i ==0:
             result = dict[result_list[i]]
         else:
