@@ -31,7 +31,7 @@ with open('input.txt') as f:
 
             dict[num]= strs
             result_list.append(num)
-    print(dict)
+    #print(dict)
     #print(result_list)
     result_list= sorted(result_list)
     #print(result_list)
@@ -42,7 +42,7 @@ with open('input.txt') as f:
         else:
             result+= dict[result_list[i]]
 
-    #print(result)
+    print(result)
         #print(strs)
 
 
